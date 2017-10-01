@@ -16,11 +16,13 @@
         /* font */
         font-family: 'Kanit', sans-serif;
       }
-      body {
+      html, body {
         /* สีพื้นหลัง */
         background-color: #000;
         overflow: hidden;
         position: relative;
+        width: 100%;
+        height: 100%;
       }
       figure a {
         width: 100%;
@@ -76,23 +78,31 @@
       .next {
         z-index: 1;
         color: #FFF;
-        position: fixed;
-        right: 10%;
-        bottom: 10%;
+        position: absolute;
+        right: 2em;
+        bottom: 2em;
         font-size: 2em;
         text-decoration: none;
         background-color: rgba(0,0,0,0.2);
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
-        padding: 5px;
-        -webkit-transition: all 0.5s ease-out;
-        -moz-transition: all 0.5s ease-out;
-        -ms-transition: all 0.5s ease-out;
-        transition: all 0.5s ease-out;
+        padding: 0.5em 1em;
+        -webkit-transition: background-color 0.5s ease-out;
+        -moz-transition: background-color 0.5s ease-out;
+        -ms-transition: background-color 0.5s ease-out;
+        transition: background-color 0.5s ease-out;
       }
       .next:hover {
         background-color: rgba(0,0,0,0.7);
+      }
+      /* iphone and small device */
+      @media only screen and (max-width: 480px) {
+        .next {
+          right: 10px;
+          bottom: 10px;
+          font-size: 1.5em;
+        }
       }
     </style>
   </head>
